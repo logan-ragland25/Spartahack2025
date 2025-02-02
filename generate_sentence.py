@@ -1,6 +1,10 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 from random import randrange 
+import os
+
+#Must have .env file with OpenAI API Key
+load_dotenv()
 
 fun_fact_topics = [
     "Space and Astronomy",
@@ -28,7 +32,7 @@ fun_fact_topics = [
 class CodeGenerator:
     def __init__(self):
         # Initialize LLM here
-        self.client = OpenAI()
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     
     def generate_paragraph(self):
         # Select a random topic from the list
