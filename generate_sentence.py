@@ -40,7 +40,7 @@ class CodeGenerator:
             messages=[
                 {
                     "role": "user",
-                    "content": f"Please create a single sentence about {topic} for a typing game. No longer, no shorter. Preferably under 50 words. Only generate one fun fact. Do not use a quote."
+                    "content": f"Please create a single sentence about {topic} for a typing game. No longer, no shorter. Preferably under 50 words. Only generate one fun fact. Do not use a quote, and do not surround the sentence with quotes."
                 }		
             ]
         )
